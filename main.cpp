@@ -37,6 +37,8 @@ int main(){
                 cout << "Selected " << menu[userSelection-1].getName() << "\n";
             }else if(userSelection == 0){break;}
         }
+    
     total.print();
+    
     return 0;
 }

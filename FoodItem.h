@@ -23,6 +23,8 @@ class FoodItem{
     void setProtein(double protein);
     double getSodium();
     void setSodium(double sodium);
+    void setSodiumUnit(string unit);
+    string getSodiumUnit();
     FoodItem operator+(FoodItem foodItem);
     void print();
     
@@ -33,6 +35,7 @@ class FoodItem{
         double sugar;
         double protein;
         double sodium;
+        string sodiumUnit;
 };
 
 #endif
