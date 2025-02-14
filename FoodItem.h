@@ -5,6 +5,12 @@ using namespace std;
 
 class FoodItem{
     public:
+    //Overloaded Constructor Prototype:
+    FoodItem(string name, double calorie, double fat, double sugar, double protein, double sodium);
+    //Empty Constructor Prototype:
+    FoodItem();
+
+    //Accessors and Mutators Prototypes
     string getName();
     void setName(string name);
     double getCalorie();
@@ -17,16 +23,9 @@ class FoodItem{
     void setProtein(double protein);
     double getSodium();
     void setSodium(double sodium);
-
-    //Constructor
-    FoodItem(string name, double calorie, double fat, double sugar, double protein, double sodium){
-        this -> name = name;
-        this -> calorie = calorie;
-        this -> fat = fat;
-        this -> sugar = sugar;
-        this -> protein = protein;
-        this -> sodium = sodium;
-    }
+    FoodItem operator+(FoodItem foodItem);
+    void print();
+    
     private:
         string name;
         double calorie;
@@ -34,8 +33,6 @@ class FoodItem{
         double sugar;
         double protein;
         double sodium;
-        
-        FoodItem operator+(FoodItem & other) const;
 };
 
 #endif
