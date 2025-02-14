@@ -40,10 +40,12 @@ FoodItem::FoodItem(){
         if (getSodium() < 1){
             setSodium(getSodium()*1000); //I want to keep everything in grams for calculations, but sodium is often expressed in milligrams
             setSodiumUnit("mg");         //so this if statement checks if the amount of sodium is > 1, and if true, it turns it into mg
-        }else{setSodiumUnit("g");}
-        cout << name << ", Calories: " << calorie << " cal., Fat: " << fat << "g , Sugar: " << sugar << "g , Protein: " << protein << "g , Sodium: " << sodium << getSodiumUnit() << endl;
-        setSodium(getSodium()/1000);
-        setSodiumUnit("g");
+            cout << name << ", Calories: " << calorie << " cal., Fat: " << fat << "g , Sugar: " << sugar << "g , Protein: " << protein << "g , Sodium: " << sodium << getSodiumUnit() << endl;
+            setSodium(getSodium()/1000);
+        }else{
+            setSodiumUnit("g");
+            cout << name << ", Calories: " << calorie << " cal., Fat: " << fat << "g , Sugar: " << sugar << "g , Protein: " << protein << "g , Sodium: " << sodium << getSodiumUnit() << endl;
+        }
     }
 
     //Overloaded Operator for total

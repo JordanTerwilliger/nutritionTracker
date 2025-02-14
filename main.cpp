@@ -23,6 +23,31 @@ void options(){
     for (size_t i = 0; i < menu.size(); i++){
         cout << i+1 << ". " << menu[i].getName() << "\n";
     }
+}\
+
+void testLimits(FoodItem total){
+    double calorieLimitCalories = 2000;
+    double fatLimitGrams = 70;
+    double sugarLimitGrams = 30;
+    double proteinLimitGrams = 50; //some people would beg to differ about a limit on protein
+    double sodiumLimitGrams = 2.3; 
+
+    if (total.getCalorie() > calorieLimitCalories){
+        cout << "Too many calories\n";
+    }
+    if (total.getFat() > fatLimitGrams){
+        cout << "Too much fat.\n";
+    }
+    if (total.getSugar() > sugarLimitGrams){
+        cout << "Too much sugar\n";
+    }
+    if (total.getProtein() > proteinLimitGrams){
+        cout << "Too much protein\n";
+    }
+    //cout << total.getSodium();
+    if (total.getSodium() > sodiumLimitGrams){
+        cout << "Too much sodium\n";
+    }
 }
 
 int main(){
@@ -39,6 +64,7 @@ int main(){
         }
     
     total.print();
+    testLimits(total);
     system("pause");
     return 0;
 }
