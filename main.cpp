@@ -39,6 +39,6 @@ int main(){
         }
     
     total.print();
-    
+    system("pause");
     return 0;
 }
